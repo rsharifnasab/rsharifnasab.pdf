@@ -1,0 +1,85 @@
+% based on moderncv
+% https://www.ctan.org/pkg/moderncv
+\documentclass[11pt, a4paper, color, final]{moderncv}
+
+\moderncvtheme[purple]{casual}
+
+% adjust the page geometry
+\usepackage[scale=0.85]{geometry}
+\recomputelengths{}
+
+% personal data
+\firstname{Roozbeh}
+\lastname{Sharifnasab}
+\title{CE Student at Shahid Beheshti university}
+\phone[mobile]{+98 937 236 3864}
+\email{rsharifnasab@gmail.com}
+\homepage{rsharifnasab.ir}
+\photo[96pt]{profile}
+\born{25 Agust 2000}
+\quote{I want to learn how things work}
+
+\social[skype]{rsharifnasab}
+\social[github]{rsharifnasab}
+\social[stackoverflow]{10999348/roozbeh-sharifnasab}
+\social[telegram]{rsharifnasab}
+
+\begin{document}
+\maketitle
+
+\input{resume/summary.tex}
+
+\input{resume/experience.tex}
+
+\section{Languages}
+\cvitemwithcomment{English}{Proficient}{}
+\cvitemwithcomment{Persian}{Native}{}
+
+\section{Skills}
+
+%% \cvskillentry[*][<post_padding>]{<skill_cathegory>}{<0-5>}{<skill_name>}{<years_of_experience>}{<comment>}%
+\cvskillentry*{Language:}{5}{Java}{}{}
+\cvskillentry{}{4}{C}{}{}
+\cvskillentry{}{4}{Golang}{}{}
+\cvskillentry{}{4}{Python3}{}{}
+\cvskillentry{}{2}{Haskell}{}{}
+\cvskillentry{}{2}{Bash}{}{}
+\cvskillentry{}{2}{Javascript}{}{}
+\cvskillentry{}{2}{Arm assembly}{}{}
+
+\cvskillentry*{Frameworks}{4}{JAX-RS}{}{}
+\cvskillentry{\& Libraries:}{3}{Junit}{}{}
+\cvskillentry{}{2}{Spring boot}{}{}
+\cvskillentry{}{2}{Flask}{}{}
+\cvskillentry{}{2}{Echo}{}{}
+\cvskillentry{}{2}{Apache commons}{}{}
+\cvskillentry{}{2}{Beautiful Soup}{}{}
+
+\cvskillentry*{Tools:}{4}{Maven}{}{}
+\cvskillentry{}{4}{Neovim}{}{Neovim is my lovely and only editor}
+\cvskillentry{}{3}{Pacman}{}{BTW I use Arch}
+\cvskillentry{}{3}{Git}{}{}
+\cvskillentry{}{2}{Make}{}{}
+
+\input{resume/education.tex}
+
+\input{resume/course.tex}
+
+\input{resume/teaching.tex}
+
+\input{resume/awards.tex}
+
+\iffalse
+\section{References}
+\begin{cvcolumns}
+  \begin{itemize}\item Prof.\ Sadegh Aliakbari\item Mr.\ Parham Alvani\item Prof.\ Mojtaba Vahidi\end{itemize}
+\end{cvcolumns}
+\fi
+
+\emptysection{}\closesection{}
+\vfill
+\textit{I hereby declare that the details and information given above are complete and true to the best of my knowledge}
+\linebreak
+\textbf{Roozbeh Sharifnasab}\hfil\today
+
+\end{document}
