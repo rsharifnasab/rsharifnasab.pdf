@@ -30,4 +30,3 @@ latexmk main.tx
 ```sh
 git clean -dfX
 ```
-
