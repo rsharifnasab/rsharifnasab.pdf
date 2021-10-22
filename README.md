@@ -1,24 +1,33 @@
-## How to
+# rsharifnasab.pdf
 
-- prepare system
-  Do this only once
+### Intro
 
-```bash
-yay -s texlive-core tllocalmgr
+Get to know me!
+
+### Pre-Build version
+
+You can check it on Github Releases in PDF format.
+
+### Build from source
+
+1. prepare the system (Do this only once)
+
+```sh
+yay -s texlive-core tllocalmgr # install on arch
 tllocalmgr install moderncv academicons fontawesome5 multirow arydshln
 sudo texhash
-
 ```
 
 - Make resume
 
-```shell
-latexmk  main.tx
+```sh
+latexmk main.tx
 ```
 
 - clean the folder
-  this will remove all ignored files from the local repo. [explain](https://stackoverflow.com/a/46273201/10999348)
+  this will remove all ignored files from the local repo. [how?](https://stackoverflow.com/a/46273201/10999348)
 
 ```sh
 git clean -dfX
 ```
+
