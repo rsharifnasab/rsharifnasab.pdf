@@ -12,7 +12,7 @@ sudo texhash
 
 - Make resume
 
-```bash
+```shell
 latexmk  main.tx
 ```
 
