@@ -19,6 +19,6 @@ latexmk  main.tx
 - clean the folder
   this will remove all ignored files from the local repo. [explain](https://stackoverflow.com/a/46273201/10999348)
 
-```bash
+```sh
 git clean -dfX
 ```
