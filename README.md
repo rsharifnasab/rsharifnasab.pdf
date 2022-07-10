@@ -13,7 +13,7 @@ You can check it on Github Releases in PDF format.
 1. prepare the system (Do this only once)
 
 ```sh
-yay -s texlive-core tllocalmgr # install on arch
+yay -S texlive-core tllocalmgr # install on arch
 tllocalmgr install moderncv academicons fontawesome5 multirow arydshln
 sudo texhash
 ```
