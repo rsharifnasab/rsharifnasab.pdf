@@ -22,7 +22,7 @@ sudo texhash
 - Make resume
 
 ```sh
-latexmk main.tx
+latexmk main.tex
 ```
 
 - clean the folder
