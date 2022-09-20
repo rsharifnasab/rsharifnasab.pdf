@@ -1,85 +1,171 @@
-% based on moderncv
-% https://www.ctan.org/pkg/moderncv
-\documentclass[11pt, a4paper, color, final]{moderncv}
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2015 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
 
-\moderncvtheme[purple]{casual}
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
 
-% adjust the page geometry
-\usepackage[scale=0.85]{geometry}
-\recomputelengths{}
+% The following two lines are needed to fix a MacTex compatibility issue
+% Thanks to Tony Blake for finding this fix!
+\usepackage{etoolbox}
+\robustify\cftdotfill
 
-% personal data
-\firstname{Roozbeh}
-\lastname{Sharifnasab}
-\title{CE Student at Shahid Beheshti university}
-\phone[mobile]{+98 937 236 3864}
-\email{rsharifnasab@gmail.com}
-\homepage{rsharifnasab.ir}
-\photo[96pt]{profile}
-\born{25 August 2000}
-\quote{I want to learn how things work}
 
-\social[skype]{rsharifnasab}
-\social[github]{rsharifnasab}
-\social[stackoverflow]{10999348/roozbeh-sharifnasab}
-\social[telegram]{rsharifnasab}
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
 
 \begin{document}
-\maketitle
 
-\input{resume/summary.tex}
-
-\input{resume/experience.tex}
-
-\section{Languages}
-\cvitemwithcomment{English}{Proficient}{}
-\cvitemwithcomment{Persian}{Native}{}
-
-\section{Skills}
-
-%% \cvskillentry[*][<post_padding>]{<skill_cathegory>}{<0-5>}{<skill_name>}{<years_of_experience>}{<comment>}%
-\cvskillentry*{Language:}{5}{Java}{}{}
-\cvskillentry{}{4}{C}{}{}
-\cvskillentry{}{4}{Golang}{}{}
-\cvskillentry{}{4}{Python3}{}{}
-\cvskillentry{}{3}{Bash}{}{}
-\cvskillentry{}{3}{C++}{}{}
-\cvskillentry{}{2}{Haskell}{}{}
-\cvskillentry{}{2}{Javascript}{}{}
-
-\cvskillentry*{Frameworks}{3}{JAX-RS}{}{}
-\cvskillentry{\& Libraries:}{3}{Junit}{}{}
-\cvskillentry{}{3}{Echo}{}{}
-\cvskillentry{}{3}{Networkx}{}{}
-\cvskillentry{}{2}{Apache commons}{}{}
-\cvskillentry{}{2}{Beautiful Soup}{}{}
-
-\cvskillentry*{Tools:}{3}{Maven}{}{}
-\cvskillentry{}{3}{Neovim}{}{Neovim is my lovely and only editor}
-\cvskillentry{}{3}{Pacman}{}{BTW I use Arch}
-\cvskillentry{}{3}{Git}{}{}
-\cvskillentry{}{2}{Make}{}{}
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large My Name} & \textbf{March 14, 1592} \\
+Research Analyst & my@email.com \\
+My Town, Ontario, Canada & www.mywebsite.com \\
+\end{tabular*}
+\\
 
 
-\input{resume/education.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{My University}{My Town, ON}{B.Sc. Physics}{2004 - 2008}
+	\begin{itemize}
+		\resitem{Undergraduate Thesis: Why Electron Spins Rule}
+		\resitem{Graduated with Honours and a XX.X\% average}
+	\end{itemize}
 
-\input{resume/course.tex}
+\item
+	\ressubheading{My High School}{Hick Town, ON}{High School Diploma}{2000 - 2004}
+	\begin{itemize}
+		\resitem{President of Students' Council and captain of the rugby team in senior year}
+		\resitem{Graduated with a XX.X\% average}
+	\end{itemize}
+\end{itemize}
 
-\input{resume/teaching.tex}
 
-\input{resume/awards.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Personal Statement}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{center}
+  \parbox{6.762in}{I'm the hardest working person I know, and therefore you should hire me. My qualities include blah, blah, and blah. I have lots of experience working with blah, and I am not afraid to blah. In fact, I'm such an amazing person that I can't believe you haven't hired me yet.}
+  \end{center}
 
-\iffalse
-\section{References}
-\begin{cvcolumns}
-  \begin{itemize}\item Prof.\ Sadegh Aliakbari\item Mr.\ Parham Alvani\item Prof.\ Mojtaba Vahidi\end{itemize}
-\end{cvcolumns}
-\fi
 
-\emptysection{}\closesection{}
-\vfill
-\textit{I hereby declare that the details and information given above are complete and true to the best of my knowledge}
-\linebreak
-\textbf{Roozbeh Sharifnasab}\hfil\today
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Work Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Calculus I}{My University}{Undergraduate Teaching Assistant}{Sept. 2007 - Apr. 2008}
+	\begin{itemize}
+		\resitem{Graded assignments.}
+		\resitem{Led weekly course seminars.}
+	\end{itemize}
+
+\item 
+	\ressubheading{Happy Time Farms}{Hick Town, ON}{Farm Hand}{Sept. 2000 - Dec. 2002}
+	\begin{itemize}
+		\resitem{Milked cows.}
+		\resitem{Milked goats.}
+		\resitem{Milked cats.}
+	\end{itemize}
+
+\item
+	\ressubheading{Hick Town Press}{Hick Town, ON}{Paperboy}{June 1996 - Aug. 2000}
+	\begin{itemize}
+		\resitem{Delivered the local newspaper to 70 customers every morning.}
+	\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants \& Honours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-2pt}
+	\begin{center}\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+		\multicolumn{2}{c}{Physics Graduation Prize (\$XXX) \cftdotfill{\cftdotsep}2007}\\
+		\multicolumn{2}{c}{Award of Awesomeness (\$XXX) \cftdotfill{\cftdotsep} 2006}\\
+		\multicolumn{2}{c}{My University Entrance Scholarship (\$X XXX) \cftdotfill{\cftdotsep}2004}\\
+		\multicolumn{2}{c}{My High School Grade 12 Physics Award (\$XXX) \cftdotfill{\cftdotsep}2004}\\
+		\multicolumn{2}{c}{Boy Genius Award (\$XXX) \cftdotfill{\cftdotsep}2003}\\
+		\vphantom{E}
+\end{tabular*}
+\end{center}\vspace*{-16pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	Programming and Markup Languages
+	\begin{itemize}
+		\resitem{{\bf Expert:} CSS, HTML}
+		\resitem{{\bf Intermediate:} Java, \LaTeX, Python}
+	\end{itemize}
+
+\item
+	Software
+	\begin{itemize}
+		\resitem{{\bf Expert:} MS Access, MS Excel, MS Word}
+		\resitem{{\bf Intermediate:} Maple, MATLAB}
+	\end{itemize}
+
+
+\item
+	Other
+	\begin{itemize}
+		\resitem{People person, enjoys being challenged, hardworking, smells nice}
+	\end{itemize}
+\end{itemize}
 
 \end{document}
