@@ -1,24 +1,20 @@
----
-name: latex
+name: 'Build LaTex Document'
 on:
   push:
-    paths:
-      - .github/workflows/latex.yaml
-      - '**.tex'
-      - latexmk
 jobs:
-  build_latex:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: compile resume in latex
-        uses: xu-cheng/latex-action@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: wtfjoke/setup-tectonic@v2
         with:
-          root_file: main.tex
-      - name: release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run Tectonic
+        run: tectonic main.tex
+      - name: Upload pdf
+        uses: actions/upload-artifact@v3
         with:
-          files: main.pdf
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: main
+          path: main.pdf
