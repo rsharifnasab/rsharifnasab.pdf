@@ -2,27 +2,14 @@
 
 ### Intro
 
-Get to know me!
-
-### Pre-Build version
-
-You can check it on Github Releases in PDF format.
+My CV
 
 ### Build from source
 
-1. prepare the system (Do this only once)
+- Compile resume with tectonic
 
 ```sh
-# only for arch!
-yay -S texlive-core tllocalmgr-git textlive-fontsextra texlive-fonts-fontawesome
-tllocalmgr install moderncv academicons fontawesome5 multirow arydshln
-sudo texhash
-```
-
-- Make resume
-
-```sh
-latexmk main.tex
+tectonic main.tex
 ```
 
 - clean the folder

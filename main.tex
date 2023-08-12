@@ -1,171 +1,244 @@
-% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
-% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
-% (c) 2008-2015 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
-%
-%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+\documentclass[11pt,a4paper,sans]{moderncv}
+% moderncv themes
+\moderncvstyle{banking}
+% 'casual' (default), 'classic', 'oldstylef', 'banking'
+\moderncvcolor{Black}
+%\nopagenumbers{}   
 
-\documentclass[letterpaper,11pt]{article}
-\newlength{\outerbordwidth}
-\pagestyle{empty}
-\raggedbottom
-\raggedright
-\usepackage[svgnames]{xcolor}
-\usepackage{framed}
-\usepackage{tocloft}
+% character encoding
+\usepackage[utf8]{inputenc}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
 
-% The following two lines are needed to fix a MacTex compatibility issue
-% Thanks to Tony Blake for finding this fix!
-\usepackage{etoolbox}
-\robustify\cftdotfill
+\usepackage{fontawesome5}
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+
+%\setlength{\hintscolumnwidth}{3cm}
+% if you want to change the width of the column with the dates
 
 
-%-----------------------------------------------------------
-%Edit these values as you see fit
-
-\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
-\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
-\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
-
-
-%-----------------------------------------------------------
-%Margin setup
-
-\setlength{\evensidemargin}{-0.25in}
-\setlength{\headheight}{0in}
-\setlength{\headsep}{0in}
-\setlength{\oddsidemargin}{-0.25in}
-\setlength{\paperheight}{11in}
-\setlength{\paperwidth}{8.5in}
-\setlength{\tabcolsep}{0in}
-\setlength{\textheight}{9.5in}
-\setlength{\textwidth}{7in}
-\setlength{\topmargin}{-0.3in}
-\setlength{\topskip}{0in}
-\setlength{\voffset}{0.1in}
-
-
-%-----------------------------------------------------------
-%Custom commands
-\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{\vspace{8pt}
-  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
-    \begin{shaded}
-\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
-    \end{shaded}
-  }\vspace{-5pt}
+%------------ personal data ----------
+\name{Roozbeh}{Sharifnasab}
+\title{}
+\insti{Shahid Beheshti University}
+\address{Address: Taban St}{Valiasr Ave}{Tehran, Iran}
+\phone[mobile]{+98 937 236 3864}
+\email{rsharifnasab@gmail.com}
+\homepage{rsharifnasab.ir}
+\extrainfo{
+    \homepagesymbol\httplink{linkedin.com/in/rsharifnasab} 
+    \homepagesymbol\httplink{github.com/rsharifnasab}
 }
-\newcommand{\ressubheading}[4]{
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{#3} & \textit{#4} \\
-\end{tabular*}\vspace{-6pt}}
-%-----------------------------------------------------------
-
-
 \begin{document}
+\hypersetup{
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+\urlstyle{same}
+\noindent
+\makecvtitle
 
-\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-\textbf{\Large My Name} & \textbf{March 14, 1592} \\
-Research Analyst & my@email.com \\
-My Town, Ontario, Canada & www.mywebsite.com \\
-\end{tabular*}
-\\
+\vspace{-0.5em}
 
+% ---------- JOBS ---------
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Education}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.4em}
+\section{Work Experience}
 \begin{itemize}
-\item
-	\ressubheading{My University}{My Town, ON}{B.Sc. Physics}{2004 - 2008}
-	\begin{itemize}
-		\resitem{Undergraduate Thesis: Why Electron Spins Rule}
-		\resitem{Graduated with Honours and a XX.X\% average}
-	\end{itemize}
 
-\item
-	\ressubheading{My High School}{Hick Town, ON}{High School Diploma}{2000 - 2004}
-	\begin{itemize}
-		\resitem{President of Students' Council and captain of the rugby team in senior year}
-		\resitem{Graduated with a XX.X\% average}
-	\end{itemize}
+
+\item \textit{\textcolor{blue}{Technical Content Developer}} at \href{https://quera.org}{\textcolor{blue}{Quera}} - Design \textbf{programming challenges} for Go \& Java. Teach Linux \& Python \& Go \& Echo (2021-current)
+
+\item \textit{\textcolor{blue}{Technical Content Developer}} at {\href{https://javacup.ir}{\textcolor{blue}{Javacup}}} - Produce content about Java. \textbf{Held Javacup Exam} twice. (2019-2022)
+
+\item \textit{\textcolor{blue}{Course Mentor}} at \href{https://maktabkhooneh.org/}{\textcolor{blue}{MaktabKhooneh}} for C, ReactJS, and Front-end development. (Mar-Sep 2022)
+
+\item \textit{{\href{https://asta.ir}{\textcolor{blue}{Back-End intern}}}} at Asta. Develop maintainable apps with JAX-RS \& Spring Boot. (Summer 2021)
 \end{itemize}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Personal Statement}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \begin{center}
-  \parbox{6.762in}{I'm the hardest working person I know, and therefore you should hire me. My qualities include blah, blah, and blah. I have lots of experience working with blah, and I am not afraid to blah. In fact, I'm such an amazing person that I can't believe you haven't hired me yet.}
-  \end{center}
+
+% ---------- SKILLS -------
+\vspace{-0.5em}
+\section{Skills}
+\cvlistitem{Programming Language (Fluent): C, Java, Go, Python, Bash}
+\cvlistitem{Programming Language (Familiar): SQL, Rust, JavaScript, Elixir, Haskell, Lua}
+\cvlistitem{Frameworks: Echo, JAX-RS, Junit}
+\cvlistitem{Libraries: Networkx, Numpy, Pandas, Matplotlib, Beautiful Soup, Scipy-learn, Testify, Viper}
+\cvlistitem{Tools: Linux, Git, Docker, Graphana, Redis, Make, Maven, Mininet, Vim, Pacman}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Work Experience}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------------------ EDUCATION --------------
+\vspace{-0.4em}
+\section{Education}
+
+%%%%%%%%%%%%%% MSC %%%%%%%%%%%
+\cventry{}{Shahid Beheshti University}
+{M.Sc (Computer Software)}{2022-2024}{}{}
+\cvlistitem{~\textbf{Average: 18.53/20}}
+\cvlistitem{~Selected courses:}
+%\hskip
+%\begin{adjustwidth}{4mm}{}
+\small{
+    \begin{tabular}
+        {l@{\hskip 5mm}l@{\hskip 5mm}l}
+        ~~~~~~Software Architecture (19.39/20) & Advanced Computer Networks (18.3/20) & Test, Debug and Repair Software (19/20) \\
+    \end{tabular}
+    \medskip
+    %\end{adjustwidth}
+} % small
+
+\vspace{-0.2em}
+\cvlistitem{Thesis Topic: Code Reviewer Recommendation based on Software Repository Historical Data}
+
+%%%%%%%%%%%%% B.SC
+\vspace{0.6em}
+
+\cventry{}{Shahid Beheshti University}
+{B.Sc (Computer Engineering)}{2018-2022}{}{}
+\cvlistitem{~\textbf{Average: 17.7/20}}
+\cvlistitem{~Selected courses:}
+%\hskip
+%\begin{adjustwidth}{4mm}{}
+\small{
+    \begin{tabular}
+        {l@{\hskip 5mm}l@{\hskip 5mm}l}
+        ~~~~~~Fundamentals of Programming (20/20) & Advanced Programming (20/20) & Principles of Compiler Design (17/20) \\
+        ~~~~~~Operating Systems (18.3/20) & Internet Engineering (20/20) &  Computer Networks (20/20) \\
+        ~~~~~~Information Retrieval \& Web search (18.4/20) & System Analysis \& Design (19/20) & B.Sc Project (20/20) 
+        
+    \end{tabular}
+    \medskip
+    %\end{adjustwidth}
+} % small
+
+\vspace{-0.5em}
+\cvlistitem{B.Sc Project: A utility for \textbf{TA}s which helps them judge students' codes more flexibly.}
+
+%%%%%%%%%%%%%%% DIPLOMA
+
+\vspace{0.6em}
+\cventry{}{Allameh Helli 3 High School}
+{Diploma (Mathematics \& Engineering)}{2014-2018}{}{}
+\cvlistitem{~Average: 19.72/20}
+\cvlistitem{~Affiliated with the National Organization for the Development of Exceptional Talents (NODET).}
+
+
+\vspace{-1em}
+\section{Languages}
+\cvlistitem{Persian: Native}
+\cvlistitem{English: Proficient (Academic IELTS: 7.5)}
+
+
+
+% ---------------- TA -------------
+\vspace{-1em}
+\section{Teaching Assistant}
 \begin{itemize}
-\item
-	\ressubheading{Calculus I}{My University}{Undergraduate Teaching Assistant}{Sept. 2007 - Apr. 2008}
-	\begin{itemize}
-		\resitem{Graded assignments.}
-		\resitem{Led weekly course seminars.}
-	\end{itemize}
+\item \textcolor{blue}{Internet Engineering}, Mr. Parham Alvani, Back-End \& Git
+\item \textcolor{blue}{Operating Systems}, Prof. Mohsen Ebrahimi Moghadam, \textbf{Head TA}
+\item \textcolor{blue}{Compiler Principles}, Mr. Mohammadreza Bahrami, Project Automatic Judgement
+\item \textcolor{blue}{Advanced Programming}, Dr. Sadegh Aliakbary, \textbf{Head TA}, Held TA classes 
+\item \textcolor{blue}{Advanced Programming}, Dr. Maedeh Mosharraf, \textbf{Head TA}, Held TA classes
+\item \textcolor{blue}{Advanced Programming}, Dr. Mojtaba Vahidi
+\item \textcolor{blue}{Fundamentals of programming}, Mr. Parham Alvani, \textbf{Head TA}
+\item \textcolor{blue}{Fundamentals of programming}, Dr. Sadegh Aliakbary, \textbf{Head TA}, Held TA classes
+\end{itemize}
 
-\item 
-	\ressubheading{Happy Time Farms}{Hick Town, ON}{Farm Hand}{Sept. 2000 - Dec. 2002}
-	\begin{itemize}
-		\resitem{Milked cows.}
-		\resitem{Milked goats.}
-		\resitem{Milked cats.}
-	\end{itemize}
-
-\item
-	\ressubheading{Hick Town Press}{Hick Town, ON}{Paperboy}{June 1996 - Aug. 2000}
-	\begin{itemize}
-		\resitem{Delivered the local newspaper to 70 customers every morning.}
-	\end{itemize}
+% ------------- PRESENTATIONS -----
+\vspace{-0.55em}
+\section{Presentations}
+\begin{itemize}
+\item \textit{\textcolor{blue}{Backend Development with Golang}} at Quera's Software Engineering Boot-camp (2023)
+\item \textit{\textcolor{blue}{Python Basics}} at Quera's Software Engineering Boot-camp (2023)
+\item \textit{\textcolor{blue}{Linux crash course}} at Shahid Beheshti university (2022)
+\item \textit{\textcolor{blue}{Intro to Threading}} in Advanced Programming TA class (2022)
+% junit?
+\item \textit{\textcolor{blue}{Brief Intro to Functional Programming}} in Khaje-Nasir-Toosi university (2021)
+\item \textit{\textcolor{blue}{How to Program in Java}} for junior students (Summer 2020)
+\item \textit{\textcolor{blue}{Git crash course}} in Advanced Programming class  (2020)
+\item \textit{\textcolor{blue}{Which laptop to buy}} in the First-year students' ceremony (2020)
+\item \textit{\textcolor{blue}{Exception Handling best practices}} in Advanced Programming TA class (2020)
 \end{itemize}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Awards, Grants \& Honours}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\vspace{-2pt}
-	\begin{center}\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
-		\multicolumn{2}{c}{Physics Graduation Prize (\$XXX) \cftdotfill{\cftdotsep}2007}\\
-		\multicolumn{2}{c}{Award of Awesomeness (\$XXX) \cftdotfill{\cftdotsep} 2006}\\
-		\multicolumn{2}{c}{My University Entrance Scholarship (\$X XXX) \cftdotfill{\cftdotsep}2004}\\
-		\multicolumn{2}{c}{My High School Grade 12 Physics Award (\$XXX) \cftdotfill{\cftdotsep}2004}\\
-		\multicolumn{2}{c}{Boy Genius Award (\$XXX) \cftdotfill{\cftdotsep}2003}\\
-		\vphantom{E}
-\end{tabular*}
-\end{center}\vspace*{-16pt}
+% ----------- PROJECTS ------------
+
+\vspace{-0.5em}
+\section{Key Projects}
+
+\cventry{}{(Test, Debug and Repair Software)}
+{\textit{{\href{https://github.com/rsharifnasab/complex-network-fault-localization}{\textcolor{blue}{~Fault Localization with Complex Network techniques}}} }}{Jun-Jul 2023}{}{}
+\cvlistitem{\textit{Keywords: Program Slicing, Code Coverage, Fault Localization, Centrality Measures, Complex Network}}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Skills}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item
-	Programming and Markup Languages
-	\begin{itemize}
-		\resitem{{\bf Expert:} CSS, HTML}
-		\resitem{{\bf Intermediate:} Java, \LaTeX, Python}
-	\end{itemize}
+\vspace{-0.3mm}
+\cventry{}{(B.Sc Project / Guide: Dr. Vahidi)}
+{\textit{{\href{https://github.com/rsharifnasab/DJ}{\textcolor{blue}{~Distributed Code Judge}}}} }{Sept 2021-Aug 2022}{}{}
+\cvlistitem{A utility for \textbf{TA}s which helps them judge students' codes more flexibly than traditional judges.}
+\cvlistitem{Received the \textbf{best project award} in fall 2022 by SBU's computer faculty.}
+\cvlistitem{\textit{Keywords: TA, Automatic Judge, Script, Programming, Source code}}
 
-\item
-	Software
-	\begin{itemize}
-		\resitem{{\bf Expert:} MS Access, MS Excel, MS Word}
-		\resitem{{\bf Intermediate:} Maple, MATLAB}
-	\end{itemize}
+\vspace{-0.3mm}
+\cventry{}{(Computer Networks)}
+{\textit{{\href{https://github.com/rsharifnasab/go-linkstate-simulation}{\textcolor{blue}{~Link State Simulation}}} }}{Jun-Jul 2021}{}{}
+\cvlistitem{Implementing Manager and Router programs in Go}
+
+\vspace{-0.3mm}
+\cventry{}{(Computer Networks)}
+{\textit{{\href{https://github.com/rsharifnasab/go-socket-http-server/}{\textcolor{blue}{~Dummy HTTP Server}}} }}{Mar-Apr 2021}{}{}
+\cvlistitem{Implementing both Manager and Router programs in Go}
+
+\vspace{-0.3mm}
+\cventry{}{(Internet Engineering)}
+{\textit{{\href{https://github.com/rsharifnasab/java-http-client}{\textcolor{blue}{~Dummy HTTP client}}} }}{Jan 2021}{}{}
+\cvlistitem{Implementing a dummy HTTP client in pure Java}
+
+\vspace{-0.3mm}
+\cventry{}{(Operating Systems)}
+{\textit{{\href{https://github.com/rsharifnasab/os_project}{\textcolor{blue}{~Sleeping Barber}}} }}{Nov 2020}{}{}
+\cvlistitem{Sleeping barber Implementation in C}
+
+\vspace{-0.3mm}
+\cventry{}{(Compiler Principles)}
+{\textit{{\href{https://github.com/rsharifnasab/sbu_compiler}{\textcolor{blue}{~Roulang Compiler}}} }}{Apr-Aug 2020}{}{}
+\cvlistitem{Compiling Roulang source code to Java ByteCode with ASM}
+
+\vspace{-0.3mm}
+\cventry{}{(Data Structures)}
+{\textit{{\href{https://github.com/rsharifnasab/sbu_vi_limited}{\textcolor{blue}{~Vi Clone}}} }}{Jan-Jul 2020}{}{}
+\cvlistitem{Simple Vi-like editor with Piece Table and Trie Tree (Java)}
 
 
-\item
-	Other
-	\begin{itemize}
-		\resitem{People person, enjoys being challenged, hardworking, smells nice}
-	\end{itemize}
-\end{itemize}
+
+% ------------- AWARDS -------
+\vspace{-1em}
+\section{Achievements/Awards}
+
+\cvlistitem {Awarded the \textbf{best B.Sc's Thesis-Project} award by SBU’s computer faculty (2022) }
+\cvlistitem {Secured 11\textsuperscript{th}/130 in \textbf{National Computer Olympiad}. Participants were top students (By GPA) of top universities in Iran. (2022) }
+\cvlistitem{Granted \textbf{merit-based master's scholarship} by Shahid Beheshti University. (2022)}
+% \cvlistitem{Qualified for Masters's degree without participating in the entrance exam (Straight M.Sc) for Shahid Beheshti University. (2022)}
+
+\cvlistitem{Secured 8\textsuperscript{th} place in {\href{https://quera.org}{\textcolor{blue}{Quera Connect}}} contest in Go programming language. (2021)   }
+
+\cvlistitem{Secured 14\textsuperscript{th} place in the {\href{https://snapptrip.com}{\textcolor{blue}{Snapptrip}}} internship contest in Java programming language. (2020)}
+
+\cvlistitem{Awarded \href{https://hacktoberfest.com/}{\textcolor{blue}{Hacktoberfest}}{} prize. (by Contributing to open-source software) (2020)}
+
+\cvlistitem{Secured 3\textsuperscript{rd}/190 place in the {\href{https://javacup.ir}{\textcolor{blue}{Javacup}}} contest. Which led to a \textbf{\textit{Java Certified Professional Developer}} certificate. (2019)}
+
+
+\cvlistitem{Secured 1\textsuperscript{st} place in first-year and second-year students' contest at Shahid Beheshti university. (2018)}
+
+\cvlistitem{Ranked 1101\textsuperscript{th} in the National entrance exam for B.Sc Studies among 120,000 students. (2018)}
+
+\cvlistitem{Reached Semi-final in National Mathematics \& Computer Olympiad. 
+(2016) }
+\cvlistitem{Qualified in the National Organization for Development of Exceptional talents (NODET) entrance exam. (2011)}
+
+
 
 \end{document}
+
