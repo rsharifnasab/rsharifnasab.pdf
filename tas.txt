@@ -1,0 +1,32 @@
+Software Architecture, Dr. Sadegh Aliakbary (Fall 2023)
+Introduce to programming, Dr. Sadegh Aliakbary (Fall 2023)
+Operating systems, Professor Mohsen Ebrahimi Moghadam (Fall 2023)
+
+Advanced programming, Dr. Sadegh Aliakbary (Spring 2023)
+Operating systems, Professor Mohsen Ebrahimi Moghadam (Spring 2023)
+
+Introduce to programming, Dr. Sadegh Aliakbary (Fall 2022)
+Operating systems, Professor Mohsen Ebrahimi Moghadam (Fall 2022)
+
+Advanced Programming, Dr. Sadegh AliAkbary (Spring 2022) - Head TA
+Advanced Programming, Dr. Mojtaba Vahidi (Spring 2022)
+Operating systems, Dr. Ebrahimi Moghadam (Spring 2022) - Head TA
+Principles of Compiler Design, Dr. Mohammad Reza Bahrami - Project automatic judgment
+
+Introduce To Programming, Dr. Sadegh AliAkbary (Fall 2021) - Head TA
+Operating systems, Dr. Ebrahimi Moghadam (Fall 2021)
+Advanced Programming, Dr. Mojtaba Vahidi (Fall 2021)
+Principles of Compiler Design, Dr. Mohammad Reza Bahrami - Project automatic judgment
+
+Internet Engineering, Parham Alvani (Spring 2021)
+Advanced Programming, Dr. Sadegh AliAkbary (Spring 2021)
+Advanced Programming, Dr. Mojtaba Vahidi (Spring 2021)
+
+Introduce To Programming, Dr. Sadegh AliAkbary (Fall 2020) - Head TA
+Advanced Programming, Dr. Mojtaba Vahidi (Fall 2020)
+
+Introduce To Programming, Parham Alvani (Spring 2020) - Head TA
+Advanced Programming, Dr. Maedeh Mosharaf (Spring 2020) -‌ Head TA
+Advanced Programming, Dr. Mojtaba Vahidi (Spring 2020)
+
+Introduce To Programming, Dr. Sadegh AliAkbary (Fall 2019)
