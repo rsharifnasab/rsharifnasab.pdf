@@ -18,3 +18,6 @@ tectonic main.tex
 ```sh
 git clean -dfX
 ```
+
+### Download from releases 
+[here](https://github.com/rsharifnasab/rsharifnasab.pdf/releases/latest/download/main.pdf)
